@@ -1,5 +1,5 @@
 resource storage 'Microsoft.Storage/storageAccounts@2023-01-01' = {
-  name: 'calorifitstorage'
+  name: 'projefitstorage123'
   location: resourceGroup().location
   sku: {
     name: 'Standard_LRS'
