@@ -1,0 +1,12 @@
+services:
+  web:
+    build: ./web
+    ports:
+      - "8501:8501"
+    environment:
+      FUNCTION_BASE_URL: "http://localhost:7071/api/HttpTrigger"
+
+  func:
+    image: mcr.microsoft.com/azure-functions/python:4-python3.11
+    ports:
+      - "7071:80"
