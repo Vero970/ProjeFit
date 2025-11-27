@@ -1,12 +1,14 @@
+version: "3.9"
 services:
   web:
     build: ./web
     ports:
       - "8501:8501"
     environment:
-      FUNCTION_BASE_URL: "http://localhost:7071/api/HttpTrigger"
-
+      - FUNCTION_BASE_URL=http://localhost:7071/api/<functionname>
   func:
     image: mcr.microsoft.com/azure-functions/python:4-python3.11
+    volumes:
+      - ./azure-function:/home/site/wwwroot
     ports:
       - "7071:80"
