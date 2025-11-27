@@ -1,0 +1,7 @@
+local.settings.json
+*.PublishSettings
+__pycache__/
+*.pyc
+venv/
+.env
+.streamlit/
